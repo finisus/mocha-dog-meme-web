@@ -1,0 +1,155 @@
+@font-face {
+  font-family: 'balonku';
+  src: url('./metadata/font/BalonkuRegular-la1w.otf');
+}
+@font-face {
+  font-family: 'cutie';
+  src: url('./metadata/font/CutiePatootie-Rgjv.ttf');
+}
+@font-face {
+  font-family: 'sunny';
+  src: url('./metadata/font/SunnyspellsRegular-MV9ze.otf');
+}
+
+:root {
+  --primary: #e87883;
+  --secondary: #fdf6f2;
+  --base: #1e1e2e;
+  --brown: #5c3c22;
+  --brownTran: rgba(92, 60, 34, 0.5);
+  --brownPrimeMix: #8e554a;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: var(--primary);
+  color: var(--secondary);
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+
+header {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: 24px;
+}
+
+#yawnLeftHeader {
+  width: 160px;
+}
+#headerTitle {
+  width: 320px;
+}
+#yawnRightHeader {
+  width: 160px;
+}
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  gap: 16px;
+  padding: 16px;
+  border: 3px solid var(--brown);
+  background-color: var(--brownTran);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+footer span {
+  color: var(--secondary);
+  font-family: 'cutie';
+  letter-spacing: 4px;
+  font-size: 1.4rem;
+  word-break: break-all;
+}
+
+footer button {
+  color: var(--secondary);
+  background-color: var(--primary);
+  border: 3px solid var(--brownPrimeMix);
+  padding: 4px 12px;
+  font-family: 'cutie';
+  font-size: 1.6rem;
+  letter-spacing: 4px;
+
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 736px) {
+
+  header {
+    width: calc(100% - 24px);
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 12px;
+  }
+
+  #yawnLeftHeader {
+    align-self: flex-start;
+    width: 112px;
+  }
+  #headerTitle {
+    align-self: center;
+    width: 240px;
+  }
+  #yawnRightHeader {
+    align-self: flex-end;
+    margin-top: -12px;
+    width: 112px;
+  }
+
+
+  footer {
+    width: calc(100% - 48px);
+    margin-bottom: 12px;
+    padding: 12px;
+    gap: 12px;
+    border: 2px solid var(--brown);
+    white-space: wrap;
+  }
+
+  footer span {
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+  }
+
+  footer button {
+    border: 2px solid var(--brownPrimeMix);
+    padding: 8px 8px;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+  }
+}
