@@ -24,17 +24,53 @@ header.appendChild(header_right);
 
 const main = document.querySelector('main');
 
+const memesContainer = document.createElement('div');
+memesContainer.id = "memesContainer";
+
+main.appendChild(memesContainer);
+
 
 const footer = document.querySelector('footer');
 
+const socials = document.createElement('div');
+socials.id = "socials";
+
+const telegramBtn = document.createElement('button');
+telegramBtn.id = "telegramBtn";
+telegramBtn.innerHTML = `Telegram`;
+socials.appendChild(telegramBtn);
+
+const twitterBtn = document.createElement('button');
+twitterBtn.id = "twitterBtn";
+twitterBtn.innerHTML = `Twitter`;
+socials.appendChild(twitterBtn);
+
+const chartBtn = document.createElement('button');
+chartBtn.id = "chartBtn";
+chartBtn.innerHTML = `Chart`;
+socials.appendChild(chartBtn);
+
+const buyBtn = document.createElement('button');
+buyBtn.id = "buyBtn";
+buyBtn.innerHTML = `BUY`;
+socials.appendChild(buyBtn); 
+
+footer.appendChild(socials);
+
+const contractContainer = document.createElement('div');
+contractContainer.id = "contractContainer";
+
 const contract = document.createElement('span');
 contract.innerHTML = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
-footer.appendChild(contract);
+contractContainer.appendChild(contract);
 
 const copyContract = document.createElement('button');
+copyContract.id = "copyContractBtn";
+copyContract.classList.add("prevent-select");
 copyContract.innerHTML = "COPY";
-footer.appendChild(copyContract);
+contractContainer.appendChild(copyContract);
 
+footer.appendChild(contractContainer);
 
 
 /*
