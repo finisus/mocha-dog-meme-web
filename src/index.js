@@ -1,8 +1,16 @@
 import './style.css';
 
 import yawnLeftImg from './metadata/meme/yawn_left_framed.png';
-import headerImg from './metadata/header.png';
+import headerImg from './metadata/header-with-crown-2.png';
 import yawnRightImg from './metadata/meme/yawn_right_framed.png';
+
+import sideEyeImg from './metadata/meme/bombastic_sideeye_framed.png';
+import chomp1Img from './metadata/meme/chomp1_framed.png';
+import chomp2Img from './metadata/meme/chomp2_framed.png';
+import comfyBlankyImg from './metadata/meme/comfy_in_blanky_framed.png';
+import sillyTongueImg from './metadata/meme/tongue_silly_framed.png';
+import wutImg from './metadata/meme/wut2_framed.png';
+
 
 const header = document.querySelector('header');
 
@@ -26,6 +34,45 @@ const main = document.querySelector('main');
 
 const memesContainer = document.createElement('div');
 memesContainer.id = "memesContainer";
+
+/*
+sideEyeImg
+chomp1Img
+chomp2Img
+comfyBlankyImg
+sillyTongueImg
+wutImg
+*/
+
+const sideEye_latte = document.createElement('img');
+sideEye_latte.id = "sideEyeImg";
+sideEye_latte.src = sideEyeImg;
+memesContainer.appendChild(sideEye_latte);
+
+const chomp1_latte = document.createElement('img');
+chomp1_latte.id = "chomp1Img";
+chomp1_latte.src = chomp1Img;
+memesContainer.appendChild(chomp1_latte);
+
+const chomp2_latte = document.createElement('img');
+chomp2_latte.id = "chomp2Img";
+chomp2_latte.src = chomp2Img;
+memesContainer.appendChild(chomp2_latte);
+
+const comfyBlanky_latte = document.createElement('img');
+comfyBlanky_latte.id = "comfyBlankyImg";
+comfyBlanky_latte.src = comfyBlankyImg;
+memesContainer.appendChild(comfyBlanky_latte);
+
+const sillyTongue_latte = document.createElement('img');
+sillyTongue_latte.id = "sillyTongueImg";
+sillyTongue_latte.src = sillyTongueImg;
+memesContainer.appendChild(sillyTongue_latte);
+
+const wut_latte = document.createElement('img');
+wut_latte.id = "wutImg";
+wut_latte.src = wutImg;
+memesContainer.appendChild(wut_latte);
 
 main.appendChild(memesContainer);
 
