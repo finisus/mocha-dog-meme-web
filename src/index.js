@@ -153,9 +153,151 @@ contractContainer.appendChild(copyContract);
 footer.appendChild(contractContainer);
 
 
-/*
+function starAnimation() {
+  var canvas;
+  var context;
+  var screenH;
+  var screenW;
+  var stars = [];
+  var fps = 50;
+  var numStars = 320;
+  
+  $(document).ready(function() {
+    // Calculate the screen size
+    screenH = $(window).height();
+    screenW = $(window).width();
+    
+    // Get the canvas
+    canvas = $('#space');
+    
+    // Fill out the canvas
+    canvas.attr('height', screenH);
+    canvas.attr('width', screenW);
+    context = canvas[0].getContext('2d');
+    
+    // Create all the stars
+    for(var i = 0; i < numStars; i++) {
+      var x = Math.round(Math.random() * screenW);
+      var y = Math.round(Math.random() * screenH);
+      var length = 1 + Math.random() * 2;
+      var opacity = Math.random();
+      
+      // Create a new star and draw
+      var star = new Star(x, y, length, opacity);
+      
+      // Add the the stars array
+      stars.push(star);
+    }
+    
+    setInterval(animate, 1000 / fps);
+  });
+  
+  /**
+   * Animate the canvas
+   */
+  function animate() {
+    context.clearRect(0, 0, screenW, screenH);
+    $.each(stars, function() {
+      this.draw(context);
+    })
+  }
+  
+  /**
+   * Star
+   * 
+   * @param int x
+   * @param int y
+   * @param int length
+   * @param opacity
+   */
+  function Star(x, y, length, opacity) {
+    this.x = parseInt(x);
+    this.y = parseInt(y);
+    this.length = parseInt(length);
+    this.opacity = opacity;
+    this.factor = 1;
+    this.increment = Math.random() * .03;
+  }
+  
+  /**
+   * Draw a star
+   * 
+   * This function draws a star.
+   * You need to give the context as a parameter 
+   * 
+   * @param context
+   */
+  Star.prototype.draw = function(context) {
+    // Save the context
+    context.save();
+    
+    // Move to the position of the star
+    context.translate(this.x, this.y);
+    
+    // Change the opacity
+    if(this.opacity > 1) {
+      this.factor = -1;
+    } else if(this.opacity <= 0) {
+      this.factor = 1;
+      
+      // Reset to a new random position
+      this.x = Math.round(Math.random() * screenW);
+      this.y = Math.round(Math.random() * screenH);
+    }
+    
+    this.opacity += this.increment * this.factor;
+    
+    context.beginPath();
+    for (var i = 5; i--;) {
+      context.lineTo(0, this.length);
+      context.translate(0, this.length);
+      context.rotate((Math.PI * 2 / 10));
+      context.lineTo(0, - this.length);
+      context.translate(0, - this.length);
+      context.rotate(-(Math.PI * 6 / 10));
+    }
+    context.lineTo(0, this.length);
+    context.closePath();
+    context.fillStyle = "rgba(255, 255, 200, " + this.opacity + ")";
+    context.shadowBlur = 5;
+    context.shadowColor = '#fdf6f2';
+    context.fill();
+    
+    // Restore the context
+    context.restore();
+  }
+}
 
-add coffee beans via some sort of animation
-  - perhaps reuse/recreate animation from old days with flying dollars
 
-*/
+document.addEventListener('DOMContentLoaded', function() {
+  starAnimation();
+
+  // Hyperlinks
+  telegramBtn.addEventListener('click', () => window.open("https://t.me/", "_self"));
+  twitterBtn.addEventListener('click', () => window.open("https://x.com/", "_self"));
+  chartBtn.addEventListener('click', () => window.open("https://dexscreener.com/solana/", "_blank"));
+  buyBtn.addEventListener('click', () => window.open("https://pump.fun/", "_blank"));
+
+  // Copy Contract Logic
+  const textToCopy = contract.innerHTML;
+  copyContract.addEventListener("click", async () => {
+    try {
+      // Try the modern Clipboard API first (if supported)
+      await navigator.clipboard.writeText(textToCopy);
+      console.log("Text copied successfully using Clipboard API");
+      alert("Contract copied successfully!");
+    } catch (err) {
+      // If Clipboard API fails, use the legacy approach
+      const textArea = document.createElement("textarea");
+      textArea.value = textToCopy;
+      textArea.style.position = "fixed"; // Hide element off-screen
+      textArea.style.left = "-9999px";
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      console.log("Text copied successfully using legacy approach");
+      alert("Contract copied successfully!");
+    }
+  });
+});
