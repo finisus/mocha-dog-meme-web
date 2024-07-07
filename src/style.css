@@ -374,6 +374,49 @@ footer {
     width: 160px;
   }
 
+  #fillerContainer {
+    gap: 8px;
+  }
+  #fillerContainer img {
+    width: 80px;
+  }
+  #fillerContainer img:nth-child(odd) {
+    margin-left: 128px;
+  }
+  #fillerContainer img:nth-child(even) {
+    margin-right: 128px; 
+  }
+  
+  #coffeeCupImg {
+    margin-top: 16px;
+    width: 64px !important;
+  }
+  
+  #starsSolidBigImg {
+    margin-top: 48px;
+    width: 128px !important;
+  }
+  
+  #gemImg {
+    margin-top: 32px;
+    width: 80px !important;
+  }
+  
+  #starsPixelImg {
+    margin-top: 56px;
+    width: 96px !important;
+  }
+  
+  #arrowHeartFlowerImg {
+    margin-top: 68px;
+    width: 128px !important;
+  }
+  
+  #heartsNstarsImg {
+    margin-top: 56px;
+    width: 112px !important;
+  }
+
 
   footer {
     width: calc(100% - 24px);
