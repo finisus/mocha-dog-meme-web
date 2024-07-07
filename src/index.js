@@ -11,6 +11,13 @@ import comfyBlankyImg from './metadata/meme/comfy_in_blanky_framed.png';
 import sillyTongueImg from './metadata/meme/tongue_silly_framed.png';
 import wutImg from './metadata/meme/wut2_framed.png';
 
+import coffeeCupImg from './metadata/coffee-cup-to-go.png';
+import starsSolidBigImg from './metadata/stars-solid-big.png';
+import gemImg from './metadata/gem.png';
+import starsPixelImg from './metadata/stars-pixel.png';
+import arrowHeartFlowerImg from './metadata/arrowHeart_flower.png';
+import heartsNstarsImg from './metadata/heartsNstars.png';
+
 
 const header = document.querySelector('header');
 
@@ -34,15 +41,6 @@ const main = document.querySelector('main');
 
 const memesContainer = document.createElement('div');
 memesContainer.id = "memesContainer";
-
-/*
-sideEyeImg
-chomp1Img
-chomp2Img
-comfyBlankyImg
-sillyTongueImg
-wutImg
-*/
 
 const sideEye_latte = document.createElement('img');
 sideEye_latte.id = "sideEyeImg";
@@ -75,6 +73,41 @@ wut_latte.src = wutImg;
 memesContainer.appendChild(wut_latte);
 
 main.appendChild(memesContainer);
+
+const fillerContainer = document.createElement('div');
+fillerContainer.id = "fillerContainer";
+
+const coffeeCup = document.createElement('img');
+coffeeCup.id = "coffeeCupImg";
+coffeeCup.src = coffeeCupImg;
+fillerContainer.appendChild(coffeeCup);
+
+const starsSolidBig = document.createElement('img');
+starsSolidBig.id = "starsSolidBigImg";
+starsSolidBig.src = starsSolidBigImg;
+fillerContainer.appendChild(starsSolidBig);
+
+const gemWithDashes = document.createElement('img');
+gemWithDashes.id = "gemImg";
+gemWithDashes.src = gemImg;
+fillerContainer.appendChild(gemWithDashes);
+
+const starsPixel = document.createElement('img');
+starsPixel.id = "starsPixelImg";
+starsPixel.src = starsPixelImg;
+fillerContainer.appendChild(starsPixel);
+
+const arrowHeartFlower = document.createElement('img');
+arrowHeartFlower.id = "arrowHeartFlowerImg";
+arrowHeartFlower.src = arrowHeartFlowerImg;
+fillerContainer.appendChild(arrowHeartFlower);
+
+const heartsNstars = document.createElement('img');
+heartsNstars.id = "heartsNstarsImg";
+heartsNstars.src = heartsNstarsImg;
+fillerContainer.appendChild(heartsNstars);
+
+main.appendChild(fillerContainer);
 
 
 const footer = document.querySelector('footer');

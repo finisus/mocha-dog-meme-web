@@ -166,6 +166,7 @@ main {
   left: 50%;
   transform: translate(-50%, 0);
   width: calc(100% - 64px);
+  max-width: 880px;
   margin-top: calc(222px + 64px);
   padding-bottom: 222px;
   display: flex;
@@ -185,13 +186,73 @@ main {
 }
 #memesContainer img {
   width: 320px;
-  animation: shakeOnly 3s linear infinite;
+  animation: float 3s ease-in-out infinite;
 }
 #memesContainer img:nth-child(odd) {
   margin-right: auto;
 }
 #memesContainer img:nth-child(even) {
   margin-left: auto;
+}
+
+#fillerContainer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+#fillerContainer img {
+  width: 240px;
+}
+#fillerContainer img:nth-child(odd) {
+  margin-left: 240px;
+}
+#fillerContainer img:nth-child(even) {
+  margin-right: 240px; 
+}
+
+#coffeeCupImg {
+  margin-top: 32px;
+  width: 128px !important;
+  animation: shakeOnly 3s linear infinite;
+}
+
+#starsSolidBigImg {
+  margin-top: 80px;
+  width: 272px !important;
+  animation: blink 0.8s step-start 0s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+
+#gemImg {
+  margin-top: 64px;
+  width: 176px !important;
+  animation: float 4s ease-in-out infinite;
+}
+
+#starsPixelImg {
+  margin-top: 112px;
+  width: 160px !important;
+  animation: blink 0.69s step-start 0s infinite;
+}
+
+#arrowHeartFlowerImg {
+  margin-top: 128px;
+  width: 320px !important;
+  animation: float 3s ease-in-out infinite, shake 3s linear infinite;
+}
+
+#heartsNstarsImg {
+  margin-top: 112px;
+  width: 196px !important;
+  animation: float 4s ease-in-out infinite;
 }
 
 
