@@ -141,7 +141,7 @@ const contractContainer = document.createElement('div');
 contractContainer.id = "contractContainer";
 
 const contract = document.createElement('span');
-contract.innerHTML = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v";
+contract.innerHTML = "XXXXXXXXXXXXXXXXX";
 contractContainer.appendChild(contract);
 
 const copyContract = document.createElement('button');
