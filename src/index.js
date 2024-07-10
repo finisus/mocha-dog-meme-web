@@ -273,8 +273,8 @@ document.addEventListener('DOMContentLoaded', function() {
   starAnimation();
 
   // Hyperlinks
-  telegramBtn.addEventListener('click', () => window.open("https://t.me/", "_self"));
-  twitterBtn.addEventListener('click', () => window.open("https://x.com/", "_self"));
+  telegramBtn.addEventListener('click', () => window.open("https://t.me/MochaDogSol", "_self"));
+  twitterBtn.addEventListener('click', () => window.open("https://x.com/MochaDogSol", "_self"));
   chartBtn.addEventListener('click', () => window.open("https://dexscreener.com/solana/", "_blank"));
   buyBtn.addEventListener('click', () => window.open("https://pump.fun/", "_blank"));
 
