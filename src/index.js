@@ -141,7 +141,7 @@ const contractContainer = document.createElement('div');
 contractContainer.id = "contractContainer";
 
 const contract = document.createElement('span');
-contract.innerHTML = "xxxxxxxxxxxxxxxxxxxx";
+contract.innerHTML = "CwXoSZ2yrTbe4RpKmjtqafuJ7XUpzKoW5V1xWzKdpump";
 contractContainer.appendChild(contract);
 
 const copyContract = document.createElement('button');
@@ -276,7 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
   telegramBtn.addEventListener('click', () => window.open("https://t.me/MochaDogSol", "_self"));
   twitterBtn.addEventListener('click', () => window.open("https://x.com/MochaDogSol", "_self"));
   chartBtn.addEventListener('click', () => window.open("https://dexscreener.com/solana/", "_blank"));
-  buyBtn.addEventListener('click', () => window.open("https://pump.fun/", "_blank"));
+  buyBtn.addEventListener('click', () => window.open("https://pump.fun/CwXoSZ2yrTbe4RpKmjtqafuJ7XUpzKoW5V1xWzKdpump", "_blank"));
 
   // Copy Contract Logic
   const textToCopy = contract.innerHTML;
