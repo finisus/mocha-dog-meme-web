@@ -1,7 +1,7 @@
 {
-  "name": "latte-dog-sol-web",
+  "name": "mocha-dog-sol-web",
   "version": "1.0.0",
-  "description": "Latte the dog",
+  "description": "Mocha the dog",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/finisus/latte-dog-sol-web.git"
+    "url": "git+ssh://git@github.com/finisus/mocha-dog-sol-web.git"
   },
   "author": "Finisus",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/finisus/latte-dog-sol-web/issues"
+    "url": "https://github.com/finisus/mocha-dog-sol-web/issues"
   },
-  "homepage": "https://github.com/finisus/latte-dog-sol-web#readme",
+  "homepage": "https://github.com/finisus/mocha-dog-sol-web#readme",
   "devDependencies": {
     "css-loader": "^7.1.2",
     "file-loader": "^6.2.0",
